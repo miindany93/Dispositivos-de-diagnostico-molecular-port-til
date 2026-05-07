@@ -1,0 +1,40 @@
+/*menu*/
+header {
+    background: #4da6b3;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    color: #316870;
+}
+.logo img{
+    width: 70px;
+    height: 55px;
+}
+
+
+
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 768px) {
+    .wrap {
+        flex-direction: column;
+    }
+}

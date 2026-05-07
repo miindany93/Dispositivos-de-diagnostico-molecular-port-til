@@ -1,0 +1,363 @@
+body{
+    margin: 0px;
+    background-color: #ffffffa6;
+}
+
+/*menu*/
+header {
+    background: #1E3A5F;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+.logo img{
+    width: 70px;
+    height: 55px;
+}
+
+@media (max-width: 768px) {
+
+    /* Mostrar ícono de hamburguesa */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar links a la derecha por defecto */
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        right: 0;
+        background: #2c3e50;
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 0;
+        gap: 12px;
+        z-index: 10;
+        border-top: 1px solid #000000a9;
+    }
+
+    /* Mostrar menú cuando el checkbox esté activado */
+    .menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+}
+/* AÚN MÁS PEQUEÑO */
+@media (max-width: 480px) {
+    .logo {
+        height: 40px;
+    }
+
+    .nav-links a {
+        font-size: 15px;
+    }
+}
+
+
+/* tarjetas */
+.wrap {
+    display: flex;
+    gap: 70px;
+    align-items: flex-start;
+}
+
+/* Productos */
+.products {
+    flex: 2;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.search {
+    flex: 1;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: 0.2s;
+    box-shadow: 2px 2px 5px #888;
+    padding-top: -80px;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    border-radius: 10px;
+    
+}
+
+.price {
+    font-weight: bold;
+    margin-top: 5px;
+   
+}
+
+.qty {
+    margin: 10px 0;
+    display: inline-block;
+    gap: 10px;
+    justify-content: center;
+}
+.qty input{
+    text-align: center;
+    border: 1px solid  #888;
+    border-radius: 5px;
+    width: 60px;
+    box-sizing: border-box;
+}
+
+/*botones*/
+.btn {
+    background: #0c5c4c;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-edit {
+    background: #0f5b96;
+}
+
+.btn-delete {
+    background: #971919;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    gap: 3px;
+}
+
+
+/* Carrito (lado derecho) */
+.cart {
+    flex: 1.2;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
+
+    /* EXTRA: se queda fijo al hacer scroll */
+    position: sticky;
+    top: 20px;
+}
+
+.cart-list .item {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.item img {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.small {
+    font-size: 14px;
+}
+
+.small-muted {
+    font-size: 13px;
+    color: #888;
+}
+
+.totals {
+    margin-top: 20px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+.checkout {
+    display: block;
+    margin-top: 15px;
+    background: #0c5c4c;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.5);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.panel {
+    background: white;
+    padding: 20px;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+
+.form-actions {
+    margin-top: 15px;
+    text-align: right;
+}
+
+
+/* BOTONES */
+.boton-regresar,
+.boton-reversa {
+    width: 10%;
+    padding: 14px;
+    background-color: #be3939;
+    border: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.boton-regresar:hover,
+.boton-reversa:hover {
+    background-color: #014941;
+}
+
+
+/* EFECTOS */
+.video:hover {
+    background-color: red;
+    border-radius: 5px;
+    color: white;
+}
+
+.rutina:hover {
+    color: #1abc9c;
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE (CELULAR) */
+@media (max-width: 768px) {
+    .wrap {
+        flex-direction: column;
+    }
+}
+
+/*pie de pagina*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3A5F;
+    color: #fff;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+    
+
+}
+
+/* Parte izquierda */
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Parte derecha */
+.footer-right {
+    text-align: right;
+}
+
+/* Iconos */
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+/* Efecto hover */
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Texto final */
+.footer-right p {
+    font-size: 13px;
+    margin: 0;
+}

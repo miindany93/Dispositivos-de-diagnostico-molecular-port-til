@@ -1,0 +1,154 @@
+/*menu*/
+header {
+    background: #1E3A5F;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+.logo img{
+    width: 70px;
+    height: 55px;
+}
+
+/*contenedor 1 portada*/
+.portada {
+    background-color: #ffffffce;
+    color: #000000;
+    margin: 0;
+    padding: 0;
+}
+/*imagen superior portada*/
+.imagen0 {
+    margin-bottom: 340px;
+    margin-left: 0PX;
+    width: 100px;
+}
+.contenido-portada {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0px;
+    background-color: #d6d6d69d;
+}
+.texto-portada {
+    flex: 1 1 200px;
+    padding: 0px;
+    margin: 0;
+    color: #000000;
+}
+.titulo {
+    font-size: 100px;
+    margin: 0;
+}
+.subtitulo {
+    letter-spacing: 2px;
+    margin: 20px 0;
+    font-size: 2rem;
+    padding: 100px;
+}
+.imagen-portada {
+    right: 420px;
+    margin-left: -50px;
+    margin-top: 0px;
+}
+
+/*contenedor 2 portada*/
+.par{
+    font-size: 60px;
+}
+.contenedor-cajas {
+    background-color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.con {
+    width: 45%;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #6fa7bd9d;
+    color: #000000;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.con:hover {
+    transform: translateY(-5px);
+    background-color: #358eb8;
+}
+
+
+/*pie de pagina*/
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E3A5F;
+    color: #fff;
+    padding: 10px 40px;
+    flex-wrap: wrap;
+    
+
+}
+
+/* Parte izquierda */
+.footer-left ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-left li {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+/* Parte derecha */
+.footer-right {
+    text-align: right;
+}
+
+/* Iconos */
+.icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.icons img {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.2s ease;
+}
+
+/* Efecto hover */
+.icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Texto final */
+.footer-right p {
+    font-size: 13px;
+    margin: 0;
+}
